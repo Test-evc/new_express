@@ -52,6 +52,7 @@ def process_references(original_file, revised_file, compared_file, jid, aid, ref
         # RefsEdit_Common.check_and_fetch_style(template_file, dst)
 
     copy_file_with_name(original_file, revised_file)
+    print(original_file)
     text_paras, references = RefsEdit_Common.get_text_and_refs_from_docx(
         original_file)
     print(f"Total Text Paragraphs Count: {len(text_paras)}")
