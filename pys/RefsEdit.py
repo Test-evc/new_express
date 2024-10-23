@@ -8,6 +8,8 @@ import RefsEdit_AI
 
 BASE_PATH = '/home/ubuntu/new_express/downloads'
 
+print("new one")
+
 
 def load_environment(env_path=None):
     if env_path:
