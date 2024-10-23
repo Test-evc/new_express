@@ -6,7 +6,7 @@ import RefsEdit_Common
 from dotenv import load_dotenv
 import RefsEdit_AI
 
-BASE_PATH = '/home/krishna/project/Smart-Tools_Backend/downloads'
+BASE_PATH = '/home/ubuntu/new_express/downloads'
 
 
 def load_environment(env_path=None):
