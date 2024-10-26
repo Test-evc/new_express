@@ -158,10 +158,30 @@ def check_and_create_style(docx_file, style_name):
     doc.save(docx_file)
 
 
+def create_ref_style(doc):
+    """Create 'Ref' style if it doesn't exist"""
+    try:
+        styles = doc.styles
+        ref_style = styles.add_style('Ref', WD_STYLE_TYPE.PARAGRAPH)
+        ref_style.font.name = 'Times New Roman'  # or whatever font you prefer
+        ref_style.font.size = Pt(12)
+        # Add more formatting if needed
+        ref_style.paragraph_format.space_after = Pt(6)
+        ref_style.paragraph_format.left_indent = Pt(36)  # for hanging indent
+        # negative for hanging indent
+        ref_style.paragraph_format.first_line_indent = Pt(-36)
+    except ValueError:
+        # Style already exists, just return
+        pass
+
+
 def replace_refs_in_docx(docx_file, edited_refs, refs_count):
     style_name = "Ref"
-
     doc = Document(docx_file)
+
+    # Create the Ref style before using it
+    create_ref_style(doc)
+
     start_writing = False
     for i, para in enumerate(doc.paragraphs):
         cleaned_text = para.text.strip()
