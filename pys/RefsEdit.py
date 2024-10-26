@@ -6,7 +6,7 @@ import RefsEdit_Common
 from dotenv import load_dotenv
 import RefsEdit_AI
 
-BASE_PATH = '/home/ubuntu/new_express/downloads'
+BASE_PATH = "/home/krishna/project/Smart-Tools_Backend/downloads"
 
 print("new one")
 
@@ -98,7 +98,7 @@ def main():
     print(f"AID: {aid}")
 
     data = Common.read_csv(os.path.join(
-        BASE_PATH, f"{jid}-{aid}-metadata.csv"))
+        BASE_PATH, f"KGG1000001-unedited-metadata.csv"))
     print(f"Metadata: {data}")  # Debugging line
     tmplogfile = os.path.join(BASE_PATH, "logs", "typesetting.log")
     if os.path.exists(tmplogfile):

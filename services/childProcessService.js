@@ -19,7 +19,7 @@ export const runChildProcess = (req, res) => {
         "Spawning 'python ./pys/RefsEdit.py' with fileName:",
         fileName,
       );
-      childProcess = spawn("python", ["./pys/RefsEdit.py", fileName], env);
+      childProcess = spawn("python3", ["./pys/RefsEdit.py", fileName], env);
       break;
     case "runQA":
       console.log(
