@@ -106,7 +106,7 @@ def get_text_and_refs_from_docx(file_path):
         return "File does not exist or the path is incorrect."
     print(f"Attempting to open document at: {file_path}")
     doc = Document(
-        "/home/krishna/project/Smart-Tools_Backend/downloads/KGG1000001-unedited.docx")
+        "/home/ubuntu/new_express/downloads/KGG1000001-unedited.docx")
     text_paras = []
     references = []
     start_collecting = False
